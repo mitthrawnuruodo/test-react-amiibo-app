@@ -23,7 +23,7 @@ const AmiiboCard = ({ amiibo }) => {
       {isFlipped ? (
         <div>
           <p><strong>Series:</strong> {amiibo.amiiboSeries}</p>
-          <p><strong>Release Date:</strong> {amiibo.release?.na || 'N/A'}</p>
+          <p><strong>Release Date:</strong> {amiibo.release?.jp || 'N/A'}</p>
         </div>
       ) : (
         <div>
