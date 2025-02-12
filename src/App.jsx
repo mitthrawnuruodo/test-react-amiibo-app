@@ -18,8 +18,10 @@ const App = () => {
     <FavouriteProvider>
       <BrowserRouter>
         <header style={{ display: "flex", justifyContent: "space-between", padding: "1rem", background: "#eee" }}>
-          <h1>Amiibo Collection</h1>
-          <Link to="/favourites">❤️</Link>
+          <nav>
+            <Link to="/" style={{ marginRight: "1rem" }}>🏠 Home</Link>
+            <Link to="/favourites">❤️ Favourites</Link>
+          </nav>
         </header>
 
         <Routes>
