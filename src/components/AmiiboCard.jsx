@@ -11,6 +11,11 @@ const AmiiboCard = ({ amiibo }) => {
     setIsFlipped(!isFlipped);
   };
 
+  const handleFavouriteClick = (e) => {
+    e.stopPropagation(); // Prevents click from affecting the parent div
+    dispatch({ type: "TOGGLE_FAVOURITE", payload: amiibo });
+  };
+
   return (
     <div
       style={{
@@ -33,7 +38,7 @@ const AmiiboCard = ({ amiibo }) => {
           <img src={amiibo.image} alt={amiibo.name} style={{ width: '100px' }} />
           <h3>{amiibo.name}</h3>
           <button
-            onClick={() => dispatch({ type: "TOGGLE_FAVOURITE", payload: amiibo })}
+            onClick={handleFavouriteClick}
             style={{
               background: "none",
               border: "none",
